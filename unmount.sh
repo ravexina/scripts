@@ -1,17 +1,36 @@
 #!/bin/bash
 
-# Author: ravexina
-# https://gitlab.com/ravexina
+# Author: ravexina 
+# https://github.com/ravexina
 
-# gives a simple and fast cli interface to
-# unmount and power-off drives.
+# Usage: 
+# 	Create a list of programs installed from a specific category
+#
+# Example: 
+#       `pkgs-from universe` will list all packages from universe category (component)
+#
+# There may be some false detection in "backports" !!
 
-# Writes caches to persistent storage.
+# Licensed under the GNU General Public License v3.0 
+
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation; either version 3 of the License, or
+#  (at your option) any later version.
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+
+#  You should have received a copy of the GNU General Public License
+#  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+# Synchronize cached writes to persistent storage
 echo "start syncing..."
 sync
 
-# If no device defined as a parameter, ask for entering a device name.
-# otherwise set provided device done.
+# If no device defined as parameter ask for entering device name
+# else set it as DEV
 if [ $# -eq 0 ]
   then
 	echo "------------------"
@@ -19,18 +38,20 @@ if [ $# -eq 0 ]
 	echo "------------------"
 	echo "Enter device name: (sd[b-z])"
     	read DEV # ex: sdb
-  else
+else
 	DEV=$1 # ex: sdb
 fi
 
-# Create the drive full path (/dev/sdb)
+# Create a full device name (/dev/sdb)
 DEV="/dev/$DEV"
-# Create the partition full path (/dev/sdb1)
+# Create a partition name (/dev/sdb1)
 PARTN='1'
 PART=$DEV$PARTN
 
 echo "Unmounting $PART"
-udisksctl unmount -b $PART
+udisksctl unmount -b $PART 2> /dev/null
+
+sleep 1
 
 echo "Powering off $DEV"
 udisksctl power-off -b $DEV
