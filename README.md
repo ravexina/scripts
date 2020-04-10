@@ -20,6 +20,11 @@ Simple scripts in different langages to handle basic day to day functions.
     - Converts Gregorian & Jalali
         `gjc.py 2020/04/10`
 
+- now_playing_clementine.py
+    - Shows the details of currently playing track in Clementine music player
+    - .:: ♪♪♪ ::..
+
+
 # Mirrors
 
 This repository is available both at github and gitlab:
