@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Author: ravexina 
-# https://github.com/ravexina
-
 # Synchronize cached writes to persistent storage
 echo "start syncing..."
 sync
@@ -12,7 +9,8 @@ sync
 if [ $# -eq 0 ]
   then
 	echo "------------------"
-	lsblk | grep "sd[b-z] " | awk '{ print $1 " " $4}'
+#	lsblk | grep "sd[a-z] " | awk '{ print $1 " " $4}'
+	lsblk -o kname,model,size | grep "sd[a-z][^0-9]"
 	echo "------------------"
 	echo "Enter device name: (sd[b-z])"
     	read DEV # ex: sdb
@@ -22,12 +20,17 @@ fi
 
 # Create a full device name (/dev/sdb)
 DEV="/dev/$DEV"
-# Create a partition name (/dev/sdb1)
-PARTN='1'
-PART=$DEV$PARTN
 
-echo "Unmounting $PART"
-udisksctl unmount -b $PART 2> /dev/null
+# Get the list of mounted partitions for device
+PARTS=$(mount | grep "^${DEV}" | awk '{ print $1 }')
+
+# Unmount monunted partitions
+for PART in $PARTS;
+do
+ echo "Unmounting $PART"
+ udisksctl unmount -b $PART 2> /dev/null
+ sleep 1
+done
 
 sleep 1
 
