@@ -16,6 +16,9 @@ Simple scripts in different langages to handle basic day to day functions.
     - Safely unmont and poweroff an external drive
         - unmounts all partitions frist then poweroff the block device
         `unmount.sh sdx`
+- gjc.py
+    - Converts Gregorian & Jalali
+        `gjc.py 2020/04/10`
 
 # Mirrors
 
