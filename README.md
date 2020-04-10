@@ -3,57 +3,71 @@ Simple scripts in different langages to handle basic day to day functions.
 
 ---
 
-# List of scripts
+## List of scripts
 
-- dtagsearch.sh
-    - search for specific docker image tags
+#### dtagsearch.sh
+Search for specific docker image tags
 
-          $ dtagsearch.sh debian
-          bullseye-20200224
-          unstable-20200130-slim
-          unstable-20200130
-          testing-20200130-slim
-          testing-20200130
-          stretch-20200130-slim
-          ...
+        $ dtagsearch.sh debian
+        bullseye-20200224
+        unstable-20200130-slim
+        unstable-20200130
+        testing-20200130-slim
+        testing-20200130
+        stretch-20200130-slim
+        ...
           
-- dimgsize.sh
-    - Returns a docker image size able of looking for specific tag
+#### dimgsize.sh
+Returns a docker image size able of looking for specific tag
+
+    $ dimgsize.sh debian buster-20200224
+    49Mi
+
+#### fix-str.sh
+Fix subtitle files encoding problem -> convert to utf-8. Script contains commented usecase.
+
+#### pkgs-from.sh
+Creates a list of packages installed from a specific category
+
+    pkgs-from.sh universe
+
+#### unmount.sh
+Safely unmont and poweroff an external drive
+
+1. syncs everything on buffers
+2. Unmounts all partitions on selected device
+3. Then poweroff the block device
     
-          $ dimgsize.sh debian buster-20200224
-          49Mi
+        $ unmount.sh
+        start syncing...
+        ------------------
+        sda   SE600R 246G
+        sdb   SW700L 485G
+        ------------------
+        Enter device name: (sd[b-z])
 
 
-- fix-str.sh
-    - Fix subtitle files encoding problem -> convert to utf-8
-    - Script contains commented usecase.
+#### gjc.py
+Converts Gregorian & Jalali
 
-- pkgs-from.sh
-    - Creates a list of packages installed from a specific category
-        `pkgs-from.sh universe`
+    $ gjc.py 2020/04/10
 
-- unmount.sh
-    - Safely unmont and poweroff an external drive
-        - unmounts all partitions first then poweroff the block device
-        `unmount.sh sdx`
+#### now_playing_clementine.py
+Shows the details of currently playing track in Clementine music player
 
-- gjc.py
-    - Converts Gregorian & Jalali
-        `gjc.py 2020/04/10`
+    # While nothing is playing
+    $ now_playing_clementine.py
+    .:: ♪♪♪ ::..
 
-- now_playing_clementine.py
-    - Shows the details of currently playing track in Clementine music player
-    - .:: ♪♪♪ ::..
+#### vimcat
+vimcat from vim, to cat files in a colorful way
 
-- vimcat
-        - vimcat from vim, to cat files in a colorful way
-
-- today.sh
-    - Prints out the persian day of the week
+#### today.sh
+Prints out the persian day of the week
 
 ---
 
-# Mirrors
+## Mirrors
 
 This repository is available both at github and gitlab:
 
