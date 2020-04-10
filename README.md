@@ -7,7 +7,9 @@ Simple scripts in different langages to handle basic day to day functions.
 
 - dimgsize.sh
     - Returns a docker image size able of looking for specific tag
-    `dimgsize.sh ubuntu 16.04`
+    
+          $ dimgsize.sh debian buster-20200224
+          49Mi
 
 - dtagsearch.sh
     - search for specific docker image tags
