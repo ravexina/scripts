@@ -24,6 +24,8 @@ Simple scripts in different langages to handle basic day to day functions.
     - Shows the details of currently playing track in Clementine music player
     - .:: ♪♪♪ ::..
 
+- vimcat
+        - vimcat from vim, to cat files in a colorful way
 
 # Mirrors
 
