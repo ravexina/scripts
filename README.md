@@ -10,7 +10,7 @@ Simple scripts in different langages to handle basic day to day functions.
     - Fix subtitle files encoding problem -> convert to utf-8
     - Script contains commented usecase.
 - pkgs-from.sh
-    - Creates a list of packages installed from a specific category 
+    - Creates a list of packages installed from a specific category
         `pkgs-from.sh universe`
 - unmount.sh
     - Safely unmont and poweroff an external drive
