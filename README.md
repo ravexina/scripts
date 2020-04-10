@@ -27,6 +27,10 @@ Simple scripts in different langages to handle basic day to day functions.
 - vimcat
         - vimcat from vim, to cat files in a colorful way
 
+- today.sh
+    - Prints out the persian day of the week
+
+
 # Mirrors
 
 This repository is available both at github and gitlab:
