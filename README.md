@@ -5,12 +5,6 @@ Simple scripts in different langages to handle basic day to day functions.
 
 # List of scripts
 
-- dimgsize.sh
-    - Returns a docker image size able of looking for specific tag
-    
-          $ dimgsize.sh debian buster-20200224
-          49Mi
-
 - dtagsearch.sh
     - search for specific docker image tags
 
@@ -22,6 +16,13 @@ Simple scripts in different langages to handle basic day to day functions.
           testing-20200130
           stretch-20200130-slim
           ...
+          
+- dimgsize.sh
+    - Returns a docker image size able of looking for specific tag
+    
+          $ dimgsize.sh debian buster-20200224
+          49Mi
+
 
 - fix-str.sh
     - Fix subtitle files encoding problem -> convert to utf-8
