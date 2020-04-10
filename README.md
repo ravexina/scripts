@@ -12,15 +12,14 @@ Simple scripts in different langages to handle basic day to day functions.
 - dtagsearch.sh
     - search for specific docker image tags
 
-        $ dtagsearch.sh debian
-
-        bullseye-20200224
-        unstable-20200130-slim
-        unstable-20200130
-        testing-20200130-slim
-        testing-20200130
-        stretch-20200130-slim
-        ...
+          $ dtagsearch.sh debian
+          bullseye-20200224
+          unstable-20200130-slim
+          unstable-20200130
+          testing-20200130-slim
+          testing-20200130
+          stretch-20200130-slim
+          ...
 
 - fix-str.sh
     - Fix subtitle files encoding problem -> convert to utf-8
