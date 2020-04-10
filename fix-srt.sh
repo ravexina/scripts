@@ -2,9 +2,10 @@
 
 # Author: ravexina
 # https://github.com/ravexina
+# https://gitlab.com/ravexina
 
 # We can use this script in file managers custome actions, etc.
-# For example in thunar: fix-str.sh %f %n
+# For example in thunar: fix-srt.sh %f %n
 # %f Will pass the selected file path as a first argument.
 # %n Will pass the selected file name (for creating the fixed one).
 
