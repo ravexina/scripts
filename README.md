@@ -68,6 +68,9 @@ Prints out the persian day of the week
 #### tor-ip.py
 Request a new IP address
 
+#### toggle_wifi.sh
+Softly blocks/unblocks wifi using nmcli
+
 ---
 
 ## Mirrors
