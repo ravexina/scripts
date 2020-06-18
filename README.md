@@ -65,6 +65,9 @@ vimcat from vim, to cat files in a colorful way
 #### today.sh
 Prints out the persian day of the week
 
+#### tor-ip.py
+Request a new IP address
+
 ---
 
 ## Mirrors
