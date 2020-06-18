@@ -16,7 +16,7 @@ Search for specific docker image tags
     testing-20200130
     stretch-20200130-slim
     ...
-          
+
 #### dimgsize.sh
 Returns a docker image size able of looking for specific tag
 
@@ -37,7 +37,7 @@ Safely unmont and poweroff an external drive
 1. syncs everything on buffers
 2. Unmounts all partitions on selected device
 3. Then poweroff the block device
-    
+
         $ unmount.sh
         start syncing...
         ------------------
@@ -70,6 +70,10 @@ Request a new IP address
 
 #### toggle_wifi.sh
 Softly blocks/unblocks wifi using nmcli
+
+#### chroot.sh
+Run multiple mount command cause I'm too lazy to do it myself.
+
 
 ---
 
