@@ -71,6 +71,9 @@ Request a new IP address
 #### toggle_wifi.sh
 Softly blocks/unblocks wifi using nmcli
 
+#### toggle_touchpad.sh
+Softly enable/disable touchpad using xinput
+
 #### chroot.sh
 Run multiple mount command cause I'm too lazy to do it myself.
 
